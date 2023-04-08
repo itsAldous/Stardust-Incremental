@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The ??? Tree",
 	id: "mymod",
 	author: "nobody",
-	pointsName: "points",
+	pointsName: "stardusts",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -13,7 +13,7 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
+	num: "0.1",
 	name: "Literally nothing",
 }
 
@@ -28,18 +28,18 @@ let winText = `Congratulations! You have reached the end and beaten this game, b
 // (The ones here are examples, all official functions are already taken care of)
 var doNotCallTheseFunctionsEveryTick = ["blowUpEverything"]
 
-function getStartPoints(){
-    return new Decimal(modInfo.initialStartPoints)
+function getStartStardusts(){
+    return new Decimal(modInfo.initialStartStardusts)
 }
 
 // Determines if it should show points/sec
-function canGenPoints(){
+function canGenStardusts(){
 	return true
 }
 
 // Calculate points/sec!
-function getPointGen() {
-	if(!canGenPoints())
+function getStardustsGen() {
+	if(!canGenStardusts())
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
@@ -56,7 +56,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.stardusts.gte(new Decimal("e280000000"))
 }
 
 
